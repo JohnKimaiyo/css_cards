@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card flip with text</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 100px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .flip-card:hover.flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front,
+    .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front {
+      background-color: #2980b9;
+      color: white;
+      transform: rotatey(180deg);
+    }
+  </style>
+  <body>
+    <h1>Crd flip with text</h1>
+    <h3>Hover over the image below</h3>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <img
+          src="/images/photograper.jpeg"
+          alt="Avatar"
+          style="width: 300px; height: 300px"
+        />
+      </div>
+      <div class="flip-card-back">
+        <h1>JohnKimaiyo</h1>
+        <p>React Developer</p>
+        <p>We love coding</p>
+      </div>
+    </div>
+  </body>
+</html>
